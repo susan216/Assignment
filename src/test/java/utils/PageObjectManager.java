@@ -9,7 +9,7 @@ import pageObjects.FundingSocitiesStatisticsPageAction;
 public class PageObjectManager {
 	
 	
-	//Page Object classes will be initiated
+	
 	WebDriver driver;
 	public FundingSocitiesLandingPageAction fundingSocitiesLandingPageAction;
 	public FundingSocitiesStatisticsPageAction fundingSocitiesStatisticsPageAction;

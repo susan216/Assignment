@@ -41,7 +41,7 @@ Examples:
 |url|
 |https://fundingsocieties.com/|
 
-@Statistics_Tabs
+@Statistics @Statistics_Tabs
 Scenario Outline: Veirfy General, Repayment, Disbursement tabs are displayed on Statistics page
 Given User launches "<url>"
 When User clicks Statistics button
@@ -54,7 +54,7 @@ Examples:
 |https://fundingsocieties.com/|
 
 
-@Statistics_GeneralTab
+@Statistics @Statistics_GeneralTab
 Scenario Outline: Veirfy total approved loans, total amount disbursed and default rate are displayed under General Tab
 Given User launches "<url>"
 When User clicks Statistics button
@@ -78,7 +78,7 @@ Examples:
 |https://fundingsocieties.com/|
 
 
-@Statistics_DisbursementTab
+@Statistics @Statistics_DisbursementTab
 Scenario Outline: Veirfy Disbursement tab and store all industry names according percentage
 Given User launches "<url>"
 When User clicks Statistics button

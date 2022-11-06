@@ -38,8 +38,8 @@ public class SeleniumDriver {
 		
 	}
 	WebDriver driver;
-	FileInputStream fis = new FileInputStream(
-			"C:\\Users\\91955\\E2EFramework\\WithTestNG\\src\\test\\java\\config\\global.properties");
+	FileInputStream fis = new FileInputStream(System.getProperty("user.dir") +
+			"\\src\\test\\java\\config\\global.properties");
 	Properties prop = new Properties();
 	
 	public WebDriver getDriver() throws IOException {
@@ -49,37 +49,14 @@ public class SeleniumDriver {
 				: prop.getProperty("browser");
 		caps.setBrowserName(browser);
 		caps.setPlatform(providePlatform());
+		
 		if (driver == null) {
-			driver = new RemoteWebDriver(new URL("http://192.168.29.103:4444/"), caps);
+			driver = new RemoteWebDriver(new URL(prop.getProperty("host")), caps);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			return driver;
 		}else {
 			return driver;
 		}
-
-		// boolean headless = System.getProperty("headless")!=null?
-		// Boolean.parseBoolean(System.getProperty("headless")):
-		// Boolean.parseBoolean(prop.getProperty("headless"));
-
-		/*
-		 * DesiredCapabilities dc =DesiredCapabilities(); LoggingPreferences logprefs =
-		 * new LoggingPreferences(); logprefs.enable(LogType.PERFORMANCE, Level.ALL);
-		 * dc.setCapability(CapabilityType.LOGGING_PREFS, logprefs); RemoteWebDriver
-		 * driver2 = new RemoteWebDriver(dc);
-		 */
-		/*
-		 * if(browser.equalsIgnoreCase("chrome")) { if(driver== null) {
-		 * WebDriverManager.chromedriver().setup(); ChromeOptions options = new
-		 * ChromeOptions(); //options.setHeadless(headless); driver = new
-		 * ChromeDriver(options);
-		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); } }else
-		 * if(browser.equalsIgnoreCase("edge")) { if(driver== null) {
-		 * WebDriverManager.edgedriver().setup(); EdgeOptions options = new
-		 * EdgeOptions(); //options.setHeadless(headless); driver = new
-		 * EdgeDriver(options);
-		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); } }
-		 */
-		
 
 	}
 
@@ -89,26 +66,6 @@ public class SeleniumDriver {
 		}
 	}
 
-	public static Object[] getJsonData(String fileName) throws IOException {
-
-		String fileAsString = FileUtils.readFileToString(
-				new File(System.getProperty("user.dir") + "\\src\\test\\java\\deepthi\\dataProvider\\" + fileName),
-				StandardCharsets.UTF_8);
-		ObjectMapper mapper = new ObjectMapper();
-
-		/* String to Json */
-		List<HashMap<String, String>> map = mapper.readValue(fileAsString,
-				new TypeReference<List<HashMap<String, String>>>() {
-				});
-
-		return map.toArray();
-	}
-
-	public void openURL(String url) {
-
-		driver.get(url);
-	}
-	
 	public Platform providePlatform() throws IOException {
 		prop.load(fis);
 		String platform = prop.getProperty("platform");

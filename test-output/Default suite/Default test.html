@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Nov 06 21:44:35 IST 2022</td>
+<td>Started on:</td><td>Mon Nov 07 04:35:02 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>78 seconds (78903 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11444 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,33 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Veirfy Disbursement tab and store all industry names according percentage", "Optional[Validate Statistics page]"</td>
-<td></td>
-<td>77</td>
-<td>runners.TestNGRunner@2e385cce</td></tr>
+<td title='runners.RerunTestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runners.RerunTestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Veirfy Fulfilment Rate is displayed on Statistics page", "Optional[Validate Statistics page]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepDef.FundingSocietiesStatisticsPageStepDef.verify_fulfilment_rate_is_displayed_to_the_user(FundingSocietiesStatisticsPageStepDef.java:40)
+	at ?.Verify Fulfilment Rate is displayed to the user(file:///C:/Users/91955/Git/Assignment/src/test/java/features/FundingSocietiesStatisticsPage.feature:39)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1807411905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1807411905'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepDef.FundingSocietiesStatisticsPageStepDef.verify_fulfilment_rate_is_displayed_to_the_user(FundingSocietiesStatisticsPageStepDef.java:40)
+	at ?.Verify Fulfilment Rate is displayed to the user(file:///C:/Users/91955/Git/Assignment/src/test/java/features/FundingSocietiesStatisticsPage.feature:39)
+</pre></div></td>
+<td>10</td>
+<td>runners.RerunTestNGRunner@2e385cce</td></tr>
 </table><p>
 </body>
 </html>

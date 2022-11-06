@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-06T21:44:35 IST" name="Default suite" finished-at="2022-11-06T21:45:54 IST" duration-ms="78903">
+  <suite started-at="2022-11-07T04:35:02 IST" name="Default suite" finished-at="2022-11-07T04:35:14 IST" duration-ms="11444">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@2e385cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RerunTestNGRunner@2e385cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-11-06T21:44:35 IST" name="Default test" finished-at="2022-11-06T21:45:54 IST" duration-ms="78903">
-      <class name="runners.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestNGRunner@2e385cce]" started-at="2022-11-06T21:44:35 IST" name="setUpClass" finished-at="2022-11-06T21:44:36 IST" duration-ms="664" status="PASS">
+    <test started-at="2022-11-07T04:35:02 IST" name="Default test" finished-at="2022-11-07T04:35:14 IST" duration-ms="11444">
+      <class name="runners.RerunTestNGRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.RerunTestNGRunner@2e385cce]" started-at="2022-11-07T04:35:02 IST" name="setUpClass" finished-at="2022-11-07T04:35:03 IST" duration-ms="690" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5f9b6ae7]]>
+                <![CDATA[org.testng.TestRunner@53dad875]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@2e385cce]" started-at="2022-11-06T21:44:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-06T21:45:54 IST" duration-ms="77891" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.RerunTestNGRunner@2e385cce]" started-at="2022-11-07T04:35:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:35:13 IST" duration-ms="10397" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Veirfy Disbursement tab and store all industry names according percentage"]]>
+                <![CDATA["Veirfy Fulfilment Rate is displayed on Statistics page"]]>
               </value>
             </param>
             <param index="1">
@@ -34,14 +34,29 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at stepDef.FundingSocietiesStatisticsPageStepDef.verify_fulfilment_rate_is_displayed_to_the_user(FundingSocietiesStatisticsPageStepDef.java:40)
+at ✽.Verify Fulfilment Rate is displayed to the user(file:///C:/Users/91955/Git/Assignment/src/test/java/features/FundingSocietiesStatisticsPage.feature:39)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestNGRunner@2e385cce]" started-at="2022-11-06T21:45:54 IST" name="tearDownClass" finished-at="2022-11-06T21:45:54 IST" duration-ms="313" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.RerunTestNGRunner@2e385cce]" started-at="2022-11-07T04:35:13 IST" name="tearDownClass" finished-at="2022-11-07T04:35:14 IST" duration-ms="322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runners.TestNGRunner -->
+      </class> <!-- runners.RerunTestNGRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

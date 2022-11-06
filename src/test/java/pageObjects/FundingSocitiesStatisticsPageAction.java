@@ -13,6 +13,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,35 +22,58 @@ import org.testng.Assert;
 public class FundingSocitiesStatisticsPageAction {
 
 	WebDriver driver;
-
 	public FundingSocitiesStatisticsPageAction(WebDriver driver) {
 
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-
-	public By statistics = By.linkText("Statistics");
-	public By Statistics_Values = By.cssSelector(".detailNumber");
-	public By Statistics_Tabs = By.cssSelector(".tab-button");
-	public By GraphPoints = By.cssSelector(".highcharts-markers .highcharts-point");
-	public By TotalApprovedBtn = By.cssSelector(".pull-right .btn");
-	public By AmountDisbursed = By.cssSelector("label[for='toggle-disbursed']");
-	public By defualtRate = By.cssSelector("label[for='toggle-default']");
-	public By LatestValue = By.cssSelector("g text tspan:nth-child(4)");
-	public By repaymentTab = By.cssSelector(".tab-button:nth-child(2)");
-	public By repaymentGraphValues = By.cssSelector(".highcharts-point");
-	public By disbursementTab = By.cssSelector(".tab-button:nth-child(3)");
-	public By AllIndustries = By.cssSelector(".highcharts-pie-series .highcharts-point");
-	public By industryName = By.cssSelector("text tspan");
-	public By industryPercentage = By.cssSelector("text tspan:nth-child(4)");
 	
-	public void clickstatistics() {
-		driver.findElement(statistics).click();
-	}
+	
+	@FindBy(css = ".detailNumber")
+	private List<WebElement> Statistics_Values;
+	
+	@FindBy(css = ".tab-button")
+	private List<WebElement> Statistics_Tabs;
+	
+	@FindBy(css = ".highcharts-markers .highcharts-point")
+	private List<WebElement> GraphPoints;
+	
+	@FindBy(css = ".pull-right .btn")
+	private WebElement TotalApprovedBtn;
+	
+	@FindBy(css = "label[for='toggle-disbursed']")
+	private WebElement AmountDisbursed;
+	
+	@FindBy(css = "label[for='toggle-default']")
+	private WebElement defualtRate;
+	
+	@FindBy(css = "g text tspan:nth-child(4)")
+	private WebElement LatestValue;
+	
+	@FindBy(css = ".tab-button:nth-child(2)")
+	private WebElement repaymentTab;
+	
+	@FindBy(css = ".highcharts-point")
+	private List<WebElement> repaymentGraphValues;
+	
+	@FindBy(css = ".tab-button:nth-child(3)")
+	private WebElement disbursementTab;
+	
+	@FindBy(css = ".highcharts-pie-series .highcharts-point")
+	private List<WebElement> AllIndustries;
+	
+	@FindBy(css = "text tspan")
+	private WebElement industryName;
+	
+	@FindBy(css = "text tspan:nth-child(4)")
+	private WebElement industryPercentage;
+	
+	
 
 	public void statistics_TotalFunded() {
-		List<WebElement> statistics = driver.findElements(Statistics_Values);
+		
 
-		for (WebElement caption : statistics) {
+		for (WebElement caption : Statistics_Values) {
 			WebElement text = caption.findElement(By.cssSelector(".detailNumber .detailCaption"));
 			if (text.isDisplayed()) {
 				if (text.getText().equalsIgnoreCase("Total funded")) {
@@ -64,9 +89,8 @@ public class FundingSocitiesStatisticsPageAction {
 	}
 
 	public void statistics_NoOfFinancing() {
-		List<WebElement> statistics = driver.findElements(Statistics_Values);
-
-		for (WebElement caption : statistics) {
+		
+		for (WebElement caption : Statistics_Values) {
 			WebElement text = caption.findElement(By.cssSelector(".detailNumber .detailCaption"));
 			if (text.isDisplayed()) {
 				if (text.getText().contains("No. of")) {
@@ -82,9 +106,7 @@ public class FundingSocitiesStatisticsPageAction {
 
 	public void statistics_DefaultRate() {
 
-		List<WebElement> statistics = driver.findElements(Statistics_Values);
-
-		for (WebElement caption : statistics) {
+		for (WebElement caption : Statistics_Values) {
 			WebElement text = caption.findElement(By.cssSelector(".detailNumber .detailCaption"));
 			if (text.isDisplayed()) {
 				if (text.getText().contains("Default")) {
@@ -99,9 +121,8 @@ public class FundingSocitiesStatisticsPageAction {
 	}
 
 	public void statistics_FulfilmentRate() {
-		List<WebElement> statistics = driver.findElements(Statistics_Values);
-
-		for (WebElement caption : statistics) {
+		
+		for (WebElement caption : Statistics_Values) {
 			WebElement text = caption.findElement(By.cssSelector(".detailNumber .detailCaption"));
 			if (text.isDisplayed()) {
 				if (text.getText().contains("fulfillment rate")) {
@@ -118,10 +139,8 @@ public class FundingSocitiesStatisticsPageAction {
 
 	public void GeneralTab() {
 
-		List<WebElement> Tabs = driver.findElements(Statistics_Tabs);
-
 		boolean GeneralTab = false;
-		for (WebElement tab : Tabs) {
+		for (WebElement tab : Statistics_Tabs) {
 
 			if (tab.getText().contains("General")) {
 
@@ -137,10 +156,8 @@ public class FundingSocitiesStatisticsPageAction {
 
 	public void RepaymentTab() {
 
-		List<WebElement> Tabs = driver.findElements(Statistics_Tabs);
-
 		boolean RepaymentTab = false;
-		for(WebElement tab : Tabs) {
+		for(WebElement tab : Statistics_Tabs) {
 			
 			if(tab.getText().contains("Repayment")) {
 				
@@ -156,10 +173,8 @@ public class FundingSocitiesStatisticsPageAction {
 
 	public void DisbursmentTab() {
 
-		List<WebElement> Tabs = driver.findElements(Statistics_Tabs);
-
 		boolean DisbursementTab = false;
-		for(WebElement tab : Tabs) {
+		for(WebElement tab : Statistics_Tabs) {
 			
 			if(tab.getText().contains("Disbursement")) {
 				
@@ -175,92 +190,85 @@ public class FundingSocitiesStatisticsPageAction {
 	
 	
 	public void totalApproved_GeneralTab() {
-		
-		List<WebElement> TotalApprovedValues =driver.findElements(GraphPoints);
-		driver.findElement(TotalApprovedBtn).click();
+		TotalApprovedBtn.click();
 		Actions action = new Actions(driver);
-		action.moveToElement(TotalApprovedValues.get(TotalApprovedValues.size()-1)).build().perform();
-		TotalApprovedValues.get(TotalApprovedValues.size()-1).click();
-		System.out.println(driver.findElement(LatestValue).getText() + " is the latest total approved loans");
+		action.moveToElement(GraphPoints.get(GraphPoints.size()-1)).build().perform();
+		GraphPoints.get(GraphPoints.size()-1).click();
+		System.out.println(LatestValue.getText() + " is the latest total approved loans");
 		
 	}
 	
 	public void totalApproved_AmountDisbursed() {
-		driver.findElement(AmountDisbursed).click();
-		List<WebElement> TotalApprovedValues =driver.findElements(GraphPoints);
-		
+		AmountDisbursed.click();
 		Actions action = new Actions(driver);
-		action.moveToElement(TotalApprovedValues.get(TotalApprovedValues.size()-1)).build().perform();
-		TotalApprovedValues.get(TotalApprovedValues.size()-1).click();
-		System.out.println(driver.findElement(LatestValue).getText() + " is the latest total approved loans");
+		action.moveToElement(GraphPoints.get(GraphPoints.size()-1)).build().perform();
+		GraphPoints.get(GraphPoints.size()-1).click();
+		System.out.println(LatestValue.getText() + " is the latest total approved loans");
 		
 	}
 
 	public void totalApproved_DefaultRate() {
-		driver.findElement(defualtRate).click();
-		List<WebElement> TotalApprovedValues =driver.findElements(GraphPoints);
-		
+		defualtRate.click();
 		Actions action = new Actions(driver);
-		action.moveToElement(TotalApprovedValues.get(TotalApprovedValues.size()-1)).build().perform();
-		TotalApprovedValues.get(TotalApprovedValues.size()-1).click();
-		System.out.println(driver.findElement(LatestValue).getText() + " is the latest total approved loans");
+		action.moveToElement(GraphPoints.get(GraphPoints.size()-1)).build().perform();
+		GraphPoints.get(GraphPoints.size()-1).click();
+		System.out.println(LatestValue.getText() + " is the latest total approved loans");
 		
 	}
 	
 	public void RepaymentAmounts() {
 		
-		driver.findElement(repaymentTab).click();
-		List<WebElement> GraphValues =driver.findElements(repaymentGraphValues);
+		repaymentTab.click();
 		Actions action = new Actions(driver);
-		action.moveToElement(GraphValues.get(0)).build().perform();
-		GraphValues.get(0).click();
-		System.out.println(driver.findElement(LatestValue).getText() + " is the Total Repayment amount");
+		action.moveToElement(repaymentGraphValues.get(0)).build().perform();
+		repaymentGraphValues.get(0).click();
+		System.out.println(LatestValue.getText() + " is the Total Repayment amount");
 		
-		GraphValues.get(1).click();
-		System.out.println(driver.findElement(LatestValue).getText() + " is the Principal amount");
+		repaymentGraphValues.get(1).click();
+		System.out.println(LatestValue.getText() + " is the Principal amount");
 		
-		GraphValues.get(2).click();
-		System.out.println(driver.findElement(LatestValue).getText() + " is the Interest amount");
+		repaymentGraphValues.get(2).click();
+		System.out.println(LatestValue.getText() + " is the Interest amount");
 		
 	}
 	
 	
 	public void DisbursementTabIndustries() throws InterruptedException {
+		
 		HashMap<String,String> hm = new HashMap<String,String>();
-		driver.findElement(disbursementTab).click();
+		disbursementTab.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
-		List<WebElement> industries =  driver.findElements(AllIndustries);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 		Actions action = new Actions(driver);
-		
-		 for(WebElement ind : industries) {
+		 for(WebElement ind : AllIndustries) {
 			 Thread.sleep(3000);
 			 try {
 			 wait.until(ExpectedConditions.elementToBeClickable(ind));
+			 
 			 action.moveToElement(ind).click().build().perform();
-			 System.out.println(driver.findElement(industryName).getText()
-					  + " - " +
-			 driver.findElement(industryPercentage).getText());
 			  
-			  hm.put(driver.findElement(industryName).getText(), driver.findElement(industryPercentage).getText());
+			  hm.put(industryName.getText(), industryPercentage.getText());
 			  
 			  }catch(Exception e) { 
-				  e.printStackTrace(); 
-				  }
+				  System.out.println(e);
+			  }
 			 
-		 }
-			 
-		 
-		 System.out.println(hm);
+		 }		 
 		 
 		 LinkedHashMap<String, String> lhm = hm.entrySet().stream().sorted((e1, e2)-> {
 			 return (Float.valueOf(e1.getValue()).compareTo(Float.valueOf(e2.getValue())));
 		 }).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1,e2)-> e1, LinkedHashMap :: new));
 		 
+		 
+		 
+		 System.out.println("**************INDUSTIRES IN ASCENDING ORDER***************");
 		 for(Entry<String, String> e : lhm.entrySet()) {
 			 System.out.println(e.getKey() + "=" + e.getValue());
 		 }
+		 System.out.println("**********************************************************");
+	
+	
 	}
 
 }

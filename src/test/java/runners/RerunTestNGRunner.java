@@ -9,17 +9,16 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(		
 			
-		features = "src/test/java/features",
+		features = "@target/failed_scenarios.txt",
 		glue = "stepDef",
 		plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json",
-					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-					"rerun:target/failed_scenarios.txt"},
+					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome=true,
 		tags = "@Statistics_NoOfFinancing or @Statistics_FulfilmentRate"
 		)
 
 
-public class TestNGRunner extends AbstractTestNGCucumberTests{
+public class RerunTestNGRunner extends AbstractTestNGCucumberTests{
 	
 	@Override
 	@DataProvider(parallel = true)

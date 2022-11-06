@@ -24,9 +24,6 @@ public class Hooks {
 		this.dependancyInjector = dependancyInjector;
 	}
 	
-	
-		
-	
 	@After()
 	public void closeDriverAfterScenario() throws IOException {
 		driver = dependancyInjector.getDriver();
@@ -35,17 +32,12 @@ public class Hooks {
 	
 	@AfterStep()
 	public void takeScreenshot(Scenario scenario) throws IOException {
-		driver = dependancyInjector.getDriver();
 		
-		File SourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		byte[] file =  FileUtils.readFileToByteArray(SourcePath);
-		
-		
+		driver = dependancyInjector.getDriver();		
+		File SourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);		
+		byte[] file =  FileUtils.readFileToByteArray(SourcePath);		
 		scenario.attach(file, "image/png", "Screenshot");
-		
-		
-		
+			
 	}
 
 }

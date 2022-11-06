@@ -20,7 +20,7 @@ public class FundingSocietiesLandingPageStepDef extends SeleniumDriver{
 
 	@Given("User launches {string}")
 	public void user_launches(String string) throws IOException {
-		dependencyInjector.getDriver().get(string);
+		dependencyInjector.seleniumHelper.openUrl(string); 
 	}
 
 	@When("User clicks Statistics button")
@@ -29,7 +29,7 @@ public class FundingSocietiesLandingPageStepDef extends SeleniumDriver{
 	}
 	@Then("Verify user is navigated to Statistics page")
 	public void verify_user_is_navigated_to_statistics_page() throws IOException {
-	    Assert.assertTrue(dependencyInjector.getDriver().getCurrentUrl().contains("progress"));
+	    Assert.assertTrue(dependencyInjector.pageObjectManager.fundingSocitiesLandingPageAction.validateOurProgressText());
 	}
 
 }

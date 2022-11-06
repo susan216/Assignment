@@ -1,6 +1,8 @@
 package utils;
 
+import java.io.FileInputStream;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
@@ -8,12 +10,20 @@ import org.openqa.selenium.WebDriver;
 public class SeleniumHelper {
 	
 	
-	//take screenshot etc
-	
+		
 	WebDriver driver;
+	FileInputStream fis = new FileInputStream(System.getProperty("user.dir") +
+			"\\src\\test\\java\\config\\global.properties");
+	Properties prop = new Properties();
 	
-	public SeleniumHelper(WebDriver driver) {
+	
+	public SeleniumHelper(WebDriver driver) throws Exception {
 		this.driver = driver;
+	}
+	
+	
+	public void openUrl(String url) {
+		driver.get(url);
 	}
 	
 	public void SwitchToChildWindow() {

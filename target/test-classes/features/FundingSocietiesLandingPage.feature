@@ -1,6 +1,6 @@
 Feature: Validate
 
-@LandingPage
+@Statistics @LandingPage
 Scenario Outline: Veirfy user navigates to Statistics page
 Given User launches "<url>"
 When User clicks Statistics button

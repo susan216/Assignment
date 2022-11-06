@@ -1,5 +1,7 @@
 package stepDef;
 
+import org.testng.Assert;
+
 import io.cucumber.java.en.Then;
 import utils.DependencyInjector;
 

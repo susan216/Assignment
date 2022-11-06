@@ -2,18 +2,34 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class FundingSocitiesLandingPageAction  {
+import utils.SeleniumDriver;
+
+public class FundingSocitiesLandingPageAction {
 	
 	WebDriver driver;
+	
 	public FundingSocitiesLandingPageAction(WebDriver driver) {
 		
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	public By statistics = By.linkText("Statistics");
+	
+	@FindBy(linkText = "Statistics")
+	private WebElement statistics;
+		
+	@FindBy(css = "div h1")
+	private WebElement OurProgressText;
 	
 	public void clickstatistics() {
-		driver.findElement(statistics).click();
+		statistics.click();
+	}
+	
+	public boolean validateOurProgressText() {
+		return OurProgressText.isDisplayed();
 	}
 	
 	
