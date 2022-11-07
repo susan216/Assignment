@@ -39,7 +39,7 @@ To run tests, run the following command
 
 ## Properties
 
-You can edit the following Properties in your config/gobal.properties file
+You can edit the following Properties in your config/global.properties file
 
 `browser` 
 
