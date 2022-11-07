@@ -12,11 +12,11 @@ Selenium, Cucumber, Java, TestNG, Maven...
 
 - Cross Browser Testing using Selenium Grid
 - Cross Platform Testing
-- Run from CommandLine
+- Run tests from CommandLine
 - Rerun failed tests
 - Parallel Execution
 - Extent Reports 
-- Screenshots in 
+- Screenshots
 - Page Object Model Design pattern for object repository
 
 
