@@ -26,7 +26,7 @@ Selenium, Cucumber, Java, TestNG, Maven...
 To run tests, run the following command
 
 ```bash
-  mvn test -PCucumberTests -Dbrowser=chrome
+  mvn test -PCucumberTests -Dbrowser=chrome -DPlatform=windows
 ```
 
 

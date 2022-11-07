@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 					"rerun:target/failed_scenarios.txt"},
 		monochrome=true,
-		tags = "@Statistics_NoOfFinancing or @Statistics_FulfilmentRate"
+		tags = "@Statistics"
 		)
 
 

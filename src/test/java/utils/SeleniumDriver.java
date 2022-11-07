@@ -68,7 +68,7 @@ public class SeleniumDriver {
 
 	public Platform providePlatform() throws IOException {
 		prop.load(fis);
-		String platform = prop.getProperty("platform");
+		String platform = System.getProperty("Platform")!=null?System.getProperty("Platform"): prop.getProperty("platform");
 		if (platform.equalsIgnoreCase("MAC")) {
 			return Platform.MAC;
 			
