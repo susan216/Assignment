@@ -2,58 +2,26 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="92505" started-at="2022-11-07T04:00:18 IST" finished-at="2022-11-07T04:01:50 IST">
+  <suite name="Surefire suite" duration-ms="86530" started-at="2022-11-07T11:44:32 IST" finished-at="2022-11-07T11:45:59 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="92505" started-at="2022-11-07T04:00:18 IST" finished-at="2022-11-07T04:01:50 IST">
+    <test name="Surefire test" duration-ms="86530" started-at="2022-11-07T11:44:32 IST" finished-at="2022-11-07T11:45:59 IST">
       <class name="runners.TestNGRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestNGRunner@e874448]" name="setUpClass" is-config="true" duration-ms="820" started-at="2022-11-07T04:00:18 IST" finished-at="2022-11-07T04:00:18 IST">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestNGRunner@e874448]" name="setUpClass" is-config="true" duration-ms="790" started-at="2022-11-07T11:44:32 IST" finished-at="2022-11-07T11:44:33 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2f9a01c1]]>
+                <![CDATA[org.testng.TestRunner@6b5894c8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="22537" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:41 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Veirfy Fulfilment Rate is displayed on Statistics page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate Statistics page]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="21994" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:40 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Veirfy General, Repayment, Disbursement tabs are displayed on Statistics page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate Statistics page]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="22946" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:41 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="18884" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:52 IST">
           <params>
             <param index="0">
               <value>
@@ -69,11 +37,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="22285" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:41 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="18368" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:51 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Veirfy Default rate is displayed on Statistics page"]]>
+                <![CDATA["Veirfy General, Repayment, Disbursement tabs are displayed on Statistics page"]]>
               </value>
             </param>
             <param index="1">
@@ -85,55 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="30640" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:49 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Veirfy total approved loans, total amount disbursed and default rate are displayed under General Tab"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate Statistics page]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="91210" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:01:50 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Veirfy Disbursement tab and store all industry names according percentage"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate Statistics page]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="20329" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:39 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Veirfy user navigates to Statistics page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Validate]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="22449" started-at="2022-11-07T04:00:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T04:00:41 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="19156" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:52 IST">
           <params>
             <param index="0">
               <value>
@@ -149,7 +69,87 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runners.TestNGRunner@e874448]" name="tearDownClass" is-config="true" duration-ms="435" started-at="2022-11-07T04:01:50 IST" finished-at="2022-11-07T04:01:50 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="84628" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:45:57 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Veirfy Disbursement tab and store all industry names according percentage"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Statistics page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="18980" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:52 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Veirfy Default rate is displayed on Statistics page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Statistics page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="19105" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:52 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Veirfy Fulfilment Rate is displayed on Statistics page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Statistics page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="22105" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Veirfy total approved loans, total amount disbursed and default rate are displayed under General Tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate Statistics page]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestNGRunner@e874448]" name="runScenario" duration-ms="17682" started-at="2022-11-07T11:44:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-07T11:44:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Veirfy user navigates to Statistics page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validate]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runners.TestNGRunner@e874448]" name="tearDownClass" is-config="true" duration-ms="1069" started-at="2022-11-07T11:45:57 IST" finished-at="2022-11-07T11:45:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

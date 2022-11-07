@@ -235,12 +235,15 @@ public class FundingSocitiesStatisticsPageAction {
 	
 	public void DisbursementTabIndustries() throws InterruptedException {
 		
+		
 		HashMap<String,String> hm = new HashMap<String,String>();
 		disbursementTab.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 		Actions action = new Actions(driver);
+
+		System.out.println("***Fetching Industries....***");
 		 for(WebElement ind : AllIndustries) {
 			 Thread.sleep(3000);
 			 try {
@@ -262,7 +265,7 @@ public class FundingSocitiesStatisticsPageAction {
 		 
 		 
 		 
-		 System.out.println("**************INDUSTIRES IN ASCENDING ORDER***************");
+		 System.out.println("**************INDUSTIRES IN ASCENDING ORDER OF PERCENTAGE***************");
 		 for(Entry<String, String> e : lhm.entrySet()) {
 			 System.out.println(e.getKey() + "=" + e.getValue());
 		 }
